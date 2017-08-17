@@ -9,7 +9,7 @@ export function setData(data){
 
 export function loadData(){
  return(dispatch) =>{
- return axios.get("http://localhost:8080/roster").then((response) =>{
+ return axios.get("/roster").then((response) =>{
      dispatch(setData(response.data.data));
  }).catch((error) =>{
      throw error
